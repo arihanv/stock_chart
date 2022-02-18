@@ -1,6 +1,20 @@
 # stock_chart
 Stock chart rendered using react and flask backend
 
+### Dependencies
+
+###### Pip
+```
+flask
+yahoo_fin
+pandas
+```
+
+###### Npm
+```
+npm install lightweight-charts
+```
+
 ### Running Program
 
 ```
