@@ -3,14 +3,12 @@ Stock chart rendered using react and flask backend
 
 ### Dependencies
 
-###### Pip
+##### Pip
 ```
-flask
-yahoo_fin
-pandas
+pip3 install flask yahoo_fin pandas
 ```
 
-###### Npm
+##### Npm
 ```
 npm install lightweight-charts
 ```
