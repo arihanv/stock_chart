@@ -1,7 +1,7 @@
 # stock_chart
 Stock chart rendered using react and flask backend
 
-https://github.com/arihanv/stock_chart/blob/main/Screen%20Shot%202022-02-18%20at%205.58.00%20PM.png
+![Stock Chart] (https://github.com/arihanv/stock_chart/blob/main/Screen%20Shot%202022-02-18%20at%205.58.00%20PM.png)
 
 ### Dependencies
 
