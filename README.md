@@ -1,7 +1,7 @@
 # stock_chart
 Stock chart rendered using react and flask backend
 
-###Running Program
+### Running Program
 
 ```
 cd flask-server
