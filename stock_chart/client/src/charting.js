@@ -1,7 +1,7 @@
 import React, { Component, useEffect, useRef } from 'react';
 import { createChart, CrosshairMode } from 'lightweight-charts';
 import axios from "axios";
-import "./Button.css"
+import "./chart.css"
 
 
 //Charting the data *Get original at https://codesandbox.io/s/9inkb?file=/src/index.js by DominicTobias*
