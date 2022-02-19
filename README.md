@@ -19,8 +19,10 @@ npm install axios
 ### Running Program
 
 ```
+cd stock_chart
 cd flask-server
-source vent/bin/activate
+python3 -m venv venv
+source ven/bin/activate
 python3 server.py
 ```
 
