@@ -13,6 +13,7 @@ pip3 install flask yahoo_fin pandas
 ##### Npm
 ```
 npm install lightweight-charts
+npm install axios
 ```
 
 ### Running Program
