@@ -3,6 +3,17 @@ Dynamic stock chart rendered using react and flask backend. Enter a ticker into 
 
 ![Stock Chart](https://github.com/arihanv/stock_chart/blob/main/Screen%20Shot%202022-02-18%20at%205.58.00%20PM.png)
 
+
+### Running Program
+
+```
+cd stock_chart
+cd flask-server
+python3 -m venv venv
+source venv/bin/activate
+python3 server.py
+```
+
 ### Dependencies
 
 ##### Pip
@@ -14,16 +25,6 @@ pip3 install flask yahoo_fin pandas
 ```
 npm install lightweight-charts
 npm install axios
-```
-
-### Running Program
-
-```
-cd stock_chart
-cd flask-server
-python3 -m venv venv
-source venv/bin/activate
-python3 server.py
 ```
 
 ```
