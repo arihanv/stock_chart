@@ -29,7 +29,7 @@ def members():
 def prices():
 
     #Get ticker from front-end a.k.a React
-    stock = request.json.get("user").get("name")
+    stock = request.json.get("stock").get("ticker")
 
     #function to get data
     def get_price_hist(ticker, start_date, end_date):
