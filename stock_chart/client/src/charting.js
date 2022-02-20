@@ -1,5 +1,4 @@
-import React, { Component, useEffect, useRef } from 'react';
-import { createChart, CrosshairMode } from 'lightweight-charts';
+import React, { Component } from 'react';
 import axios from "axios";
 import Charting from './chart';
 

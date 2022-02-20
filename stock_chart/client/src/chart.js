@@ -1,5 +1,5 @@
-import React, { Component, useEffect, useRef } from 'react';
-import { createChart, CrosshairMode } from 'lightweight-charts';
+import React, { useEffect, useRef } from 'react';
+import { createChart } from 'lightweight-charts';
 
 
 //Charting the data *Get original at https://codesandbox.io/s/9inkb?file=/src/index.js by DominicTobias*
