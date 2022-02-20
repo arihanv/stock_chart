@@ -18,7 +18,7 @@ python3 server.py
 
 ##### Pip
 ```
-pip3 install flask yahoo_fin pandas
+pip3 install flask yfinance pandas
 ```
 
 ##### Npm
