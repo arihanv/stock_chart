@@ -4,6 +4,7 @@ import { createChart, CrosshairMode } from 'lightweight-charts';
 
 //Charting the data *Get original at https://codesandbox.io/s/9inkb?file=/src/index.js by DominicTobias*
 const Charting = props => {
+      
     const chartContainerRef = useRef();
     const chart = useRef();
     const resizeObserver = useRef();
@@ -12,10 +13,17 @@ const Charting = props => {
       chart.current = createChart(chartContainerRef.current, {
         height: 300,
         width: 400,
+        magnet: 1,
         layout: {
           backgroundColor: '#18181b',
           textColor: 'rgba(255, 255, 255, 0.9)',
         },
+        // watermark: {
+        //   text: props.ticker,
+        //   fontSize: 200,
+        //   color: "rgba(256, 256, 256, 0.1)",
+        //   visible: true
+        // },
         grid: {
           vertLines: {
             color: '#334158',
@@ -25,14 +33,33 @@ const Charting = props => {
           },
         },
         crosshair: {
-          mode: CrosshairMode.Normal,
+          // mode: CrosshairMode.Normal,
+          vertLine: {
+            width: 1,
+            style: 1,
+            visible: true,
+            labelVisible: true,
+          },
+          horzLine: {
+              width: 0.5,
+              style: 1,
+              visible: true,
+              labelVisible: true,
+          },
         },
         priceScale: {
           borderColor: '#485c7b',
         },
         timeScale: {
           borderColor: '#485c7b',
+          // rightOffset: 50,
+          lockVisibleTimeRangeOnResize: true,
+          rightBarStaysOnScroll: true,
+          visible: true,
+          timeVisible: true,
+          secondsVisible: true,
         },
+        
       });
   
       //Charting candlesticks
@@ -75,10 +102,12 @@ const Charting = props => {
       });
   
       //Logs volume and charts it
-      console.log("volumes", props.volumes)
-      volumeSeries.setData(props.volumes);
+      console.log("volumes", props.volume)
+      volumeSeries.setData(props.volume);
+      
+      
     }, []);
-  
+    
     // Resize chart on container resizes.
     useEffect(() => {
       resizeObserver.current = new ResizeObserver(entries => {
@@ -95,6 +124,8 @@ const Charting = props => {
       resizeObserver.current.observe(chartContainerRef.current);
   
       return () => resizeObserver.current.disconnect();
+
+      
     }, []);
   
     return (

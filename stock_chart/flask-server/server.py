@@ -6,6 +6,7 @@ from yahoo_fin.stock_info import get_data
 import pandas as pd
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
+import yfinance as yf
 
 
 app = Flask(__name__)

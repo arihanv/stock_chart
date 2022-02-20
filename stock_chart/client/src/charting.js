@@ -1,7 +1,6 @@
 import React, { Component, useEffect, useRef } from 'react';
 import { createChart, CrosshairMode } from 'lightweight-charts';
 import axios from "axios";
-import "./Button.css"
 import Charting from './chart';
 
 class PersonInput extends Component {
@@ -12,7 +11,7 @@ class PersonInput extends Component {
       this.state = {
         ticker: [],
         prices: [],
-        volumes: [],
+        volume: [],
         showComponent: false
       };
       // this.handleChange = this.handleChange.bind(this);
@@ -33,7 +32,7 @@ class PersonInput extends Component {
       this.setState({
         showComponent: false,
         prices: null,
-        volumes: null
+        volume: null
        });
 
       //Intializes a variable called ticker and sets it equal to the ticker that was entered
@@ -46,7 +45,7 @@ class PersonInput extends Component {
 
         //Logs response from backend and sets prices and volume to the appropriate data from the backend
         console.log("Backend Response", res)
-        this.setState({prices: res.data.prices, volumes: res.data.volume, showComponent: true })
+        this.setState({prices: res.data.prices, volume: res.data.volume, showComponent: true })
         console.log("class level prices", this.state.prices)
       })
 
@@ -65,9 +64,9 @@ class PersonInput extends Component {
         showComponent: false,
         ticker: "",
         prices: null,
-        volumes: null,
+        volume: null,
        });
-      // document.getElementById('ticker').reset()
+      document.getElementById('ticker_form').reset()
     }
 
 
@@ -75,7 +74,7 @@ class PersonInput extends Component {
     render() {
       return (
         <div>
-        <form >
+        <form id="ticker_form">
           <label>
             Symbol :
             <input id = "ticker" type="text" ticker="ticker"  onChange={this.handleChange}/>
@@ -84,7 +83,7 @@ class PersonInput extends Component {
           <button type="submit" onClick={this.handleRemove}>Reset</button>
         </form>
         {this.state.showComponent ?
-           <Charting prices={this.state.prices} volumes={this.state.volumes}></Charting>
+           <Charting prices={this.state.prices} volume={this.state.volume} ticker={this.state.ticker}></Charting>
            :
            null
         }
